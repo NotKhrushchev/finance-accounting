@@ -49,3 +49,11 @@
         src: url(/fonts/Montserrat-Black.ttf);
     }
 }
+
+.opacity-transition {
+    transition: opacity 0.2s;
+}
+
+.opacity-transition:hover {
+    opacity: 0.8;
+}
