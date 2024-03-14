@@ -11,14 +11,10 @@ const MainLayout = (props: MainLayoutProps) => {
     const { header, content, footer } = props;
 
     return (
-        <div className="flex flex-col items-center text-white bg-[#141526]">
-            <div className="w-full max-w-[1280px]">
-                <section className="min-w-full mx-auto">{header}</section>
-                <div className="flex w-full grow min-h-screen">
-                    <section className="max-w-[1440px] mx-auto">
-                        {content}
-                    </section>
-                </div>
+        <div className="text-white bg-[#141526]">
+            <div className="w-full flex flex-col justify-center items-center">
+                <section className="w-full max-w-[1280px]">{header}</section>
+                <section className='w-full'>{content}</section>
                 <section>{footer}</section>
             </div>
         </div>
