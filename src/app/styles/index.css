@@ -61,30 +61,3 @@
         transform: translateY(0);
     }
 }
-
-.moveUpDown {
-    animation: moveUpDown 1.5s infinite;
-}
-
-.opacity-transition {
-    transition: opacity 0.2s;
-}
-
-.opacity-transition:hover {
-    opacity: 0.5;
-}
-
-.slow {
-    display: inline-block;
-    vertical-align: bottom;
-    animation: slow 2s ease;
-}
-
-@keyframes slow {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}

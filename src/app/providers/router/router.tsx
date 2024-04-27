@@ -1,6 +1,7 @@
 import { Outlet, createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../../../widgets/MainLayout/MainLayout';
-import Header from '../../../widgets/Header/Header';
+import { Header } from '../../../widgets/Header/Header';
+import { Footer } from '../../../widgets/Footer/Footer';
 
 const router = createBrowserRouter([
     {
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
             <MainLayout
                 header={<Header />}
                 content={<Outlet />}
-                footer={<footer></footer>}
+                footer={<Footer/>}
             />
         ),
         children: [

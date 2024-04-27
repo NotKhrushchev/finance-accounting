@@ -6,7 +6,8 @@ interface PageProps {
 
 const Page = (props: PageProps) => {
     const { children } = props;
-    return <main className="flex h-full w-full flex-col">{children}</main>;
+
+    return <main className="flex min-h-[calc(100vh-74px)] w-full flex-col">{children}</main>;
 };
 
 export default Page;

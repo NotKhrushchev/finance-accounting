@@ -1,32 +1,31 @@
 import { NavLink } from 'react-router-dom';
-import { en_text } from '../../shared/texts/texts';
 
-const r = false;
+const auth = false;
 
 const NavLinks = () => {
     return (
-        <ul>
-            {r ? (
+        <ul className="font-light">
+            {auth ? (
                 <li className="flex gap-[40px] items-center">
-                    <NavLink to={'/history'} className={'opacity-transition'}>
-                        {en_text.analytics_link}
+                    <NavLink to={'/history'}>
+                        Аналитика
                     </NavLink>
-                    <NavLink to={'/analytics'} className={'opacity-transition'}>
-                        {en_text.history_link}
+                    <NavLink to={'/analytics'}>
+                        История
                     </NavLink>
                 </li>
             ) : (
                 <li className="flex gap-[40px] items-center">
-                    <NavLink to={'/login'} className={'opacity-transition'}>
-                        {en_text.sign_in}
+                    <NavLink to={'/login'} className={'hover:opacity-60 transition'}>
+                        sign in
                     </NavLink>
                     <NavLink
                         to={'/registration'}
                         className={
-                            'opacity-transition border rounded-md p-[8px]'
+                            'border border-teal-400 rounded-md p-2 hover:opacity-60 transition'
                         }
                     >
-                        {en_text.sign_up}
+                        sign up
                     </NavLink>
                 </li>
             )}
@@ -34,18 +33,13 @@ const NavLinks = () => {
     );
 };
 
-const Header = () => {
+export const Header = () => {
     return (
-        <header className="w-full p-[24px] flex items-center justify-between font-[400] text-[12px] sm:text-[18px] sm:p-[40px]">
-            <NavLink
-                to={'/'}
-                className="font-[600] p-2 border-2 border-blue-600 rounded-[15px] sm:p-4"
-            >
+        <header className="w-full p-4 flex items-center justify-between font-light">
+            <NavLink to={'/'} className="font-bold text-lg text-teal-400">
                 FINANCE
             </NavLink>
             <NavLinks />
         </header>
     );
 };
-
-export default Header;

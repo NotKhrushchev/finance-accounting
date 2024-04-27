@@ -13,9 +13,9 @@ const MainLayout = (props: MainLayoutProps) => {
     return (
         <div className="text-white bg-[#141526]">
             <div className="w-full flex flex-col justify-center items-center">
-                <section className="w-full max-w-[1280px]">{header}</section>
-                <section className='w-full'>{content}</section>
-                <section>{footer}</section>
+                <div className="w-full max-w-[1280px]">{header}</div>
+                <div className="w-full">{content}</div>
+                <div className='w-full'>{footer}</div>
             </div>
         </div>
     );
