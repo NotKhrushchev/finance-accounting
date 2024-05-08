@@ -2,6 +2,8 @@ import { Outlet, createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../../../widgets/MainLayout/MainLayout';
 import { Header } from '../../../widgets/Header/Header';
 import { Footer } from '../../../widgets/Footer/Footer';
+import { ErrorPage } from '../../../pages/ErrorPage/ErrorPage';
+import Registration from '../../../features/Registration/ui/Registration';
 
 const router = createBrowserRouter([
     {
@@ -10,16 +12,14 @@ const router = createBrowserRouter([
             <MainLayout
                 header={<Header />}
                 content={<Outlet />}
-                footer={<Footer/>}
+                footer={<Footer />}
             />
         ),
+        errorElement: <ErrorPage />,
         children: [
             {
-                path: '',
-                lazy: () =>
-                    import('../../../pages/HomePage/HomePage').then(
-                        ({ HomePage }) => ({ Component: HomePage }),
-                    ),
+                path: 'registration',
+                element: <Registration />,
             },
         ],
     },

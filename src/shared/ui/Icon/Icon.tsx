@@ -4,7 +4,8 @@ type SvgProps = Omit<React.SVGProps<SVGSVGElement>, 'onClick'>;
 
 interface IconBaseProps extends SvgProps {
     className?: string;
-    Svg: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+    svg: string;
+    alt: string;
 }
 
 interface NonClickableIconProps extends IconBaseProps {
@@ -19,9 +20,17 @@ interface ClickableBaseProps extends IconBaseProps {
 type IconProps = NonClickableIconProps | ClickableBaseProps;
 
 export const Icon = (props: IconProps) => {
-    const { clickable, Svg, className, width = 20, height = 20 } = props;
+    const { clickable, svg, className, alt, width = 20, height = 20 } = props;
 
-    const icon = <Svg className={className} width={width} height={height} />;
+    const icon = (
+        <img
+            alt={alt}
+            className={className}
+            width={width}
+            height={height}
+            src={svg}
+        />
+    );
 
     if (clickable) {
         return (
