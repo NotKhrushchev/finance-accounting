@@ -7,7 +7,7 @@ import Email from '../../shared/assets/Email-icon.svg';
 
 const Footer = () => {
     return (
-        <footer className="bg-violet-theme py-8 flex items-center flex-col max-h-[142px]">
+        <footer className="bg-gray-800 py-8 flex items-center flex-col max-h-[142px]">
             <p className="text-lg mb-5">Contact me!</p>
             <ul className="flex gap-8">
                 <li>
