@@ -3,9 +3,9 @@ import {
     useNavigate,
     useRouteError,
 } from 'react-router-dom';
-import { Button } from '../../shared/ui/Button/Button';
+import Button from '../../shared/ui/Button/Button';
 
-export const ErrorPage = () => {
+const ErrorPage = () => {
     const error = useRouteError();
     const navigate = useNavigate();
     let errorMessage: string;
@@ -27,7 +27,7 @@ export const ErrorPage = () => {
 
     return (
         <div
-            id="error-page"
+            id={'error-page'}
             className="flex flex-col gap-8 justify-center items-center h-screen text-white bg-[#141526]"
         >
             <h1 className="text-4xl font-bold">Oops!</h1>
@@ -39,3 +39,5 @@ export const ErrorPage = () => {
         </div>
     );
 };
+
+export default ErrorPage;

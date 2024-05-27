@@ -3,6 +3,13 @@ export default {
     content: ['index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
+            colors: {
+                'green-theme': '#2DD4BF',
+                'violet-theme': '#4C1D95',
+                'blue-theme': '#1D4ED8',
+                'red-theme': '#E12626',
+                'gray-theme': 'rgb(75 85 99)'
+            },
             fontFamily: {
                 sans: ['Montserrat'],
             },

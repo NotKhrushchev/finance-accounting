@@ -1,13 +1,13 @@
-import { Icon } from '../../shared/ui/Icon/Icon';
+import Icon from '../../shared/ui/Icon/Icon';
 import Telegram from '../../shared/assets/Telegram-icon.svg';
 import VK from '../../shared/assets/VK-icon.svg';
 import Habr from '../../shared/assets/Habr-icon.svg';
 import Github from '../../shared/assets/Github-icon.svg';
 import Email from '../../shared/assets/Email-icon.svg';
 
-export const Footer = () => {
+const Footer = () => {
     return (
-        <footer className=" bg-violet-900 py-8 flex items-center flex-col max-h-[142px]">
+        <footer className="bg-violet-theme py-8 flex items-center flex-col max-h-[142px]">
             <p className="text-lg mb-5">Contact me!</p>
             <ul className="flex gap-8">
                 <li>
@@ -67,3 +67,5 @@ export const Footer = () => {
         </footer>
     );
 };
+
+export default Footer;

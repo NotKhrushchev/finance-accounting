@@ -19,7 +19,7 @@ interface ClickableBaseProps extends IconBaseProps {
 
 type IconProps = NonClickableIconProps | ClickableBaseProps;
 
-export const Icon = (props: IconProps) => {
+const Icon = (props: IconProps) => {
     const { clickable, svg, className, alt, width = 20, height = 20 } = props;
 
     const icon = (
@@ -46,3 +46,5 @@ export const Icon = (props: IconProps) => {
 
     return icon;
 };
+
+export default Icon

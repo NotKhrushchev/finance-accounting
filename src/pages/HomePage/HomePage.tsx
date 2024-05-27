@@ -1,9 +1,11 @@
 import Page from '../../widgets/Page/Page';
 
-export const HomePage = () => {
+const HomePage = () => {
     return (
         <Page children={undefined}>
             
         </Page>
     );
 };
+
+export default HomePage
