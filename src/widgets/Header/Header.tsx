@@ -21,7 +21,7 @@ const NavLinks = () => {
                     <NavLink
                         to={'/registration'}
                         className={
-                            'border border-teal-400 rounded p-2 hover: text transition'
+                            'border border-teal-400 rounded p-2 hover:opacity-60 transition'
                         }
                     >
                         sign up
