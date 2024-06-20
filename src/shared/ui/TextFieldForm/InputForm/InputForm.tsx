@@ -39,8 +39,8 @@ const InputForm = (props: IInputProps) => {
                     <label className="text-[15px] leading-6">
                         <input
                             className={cn(
-                                'w-full h-14 border-gray-theme border-b-2 bg-inherit pt-5 px-1 transition duration-500 font-medium',
-                                { ['text-gray-theme duration-100']: disabled },
+                                'w-full h-14 border-gray-600 border-b-2 bg-inherit pt-5 px-1 transition duration-500 font-medium',
+                                { ['text-gray-600 duration-100']: disabled },
                                 { ['border-blue-theme']: isFocus },
                                 { ['border-red-theme']: isError },
                             )}
@@ -57,7 +57,7 @@ const InputForm = (props: IInputProps) => {
                         ></input>
                         <span
                             className={cn(
-                                ' text-gray-theme absolute top-6 left-1 pointer-events-none transition-all duration-200 font-medium',
+                                ' text-gray-600 absolute top-6 left-1 pointer-events-none transition-all duration-200 font-medium',
                                 { ['top-2 text-xs text-blue-theme']: isFocus },
                                 { ['top-2 text-xs']: value },
                                 { [' text-red-theme']: isError },

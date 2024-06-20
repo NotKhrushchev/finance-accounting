@@ -25,7 +25,6 @@ const Icon = (props: IconProps) => {
     const icon = (
         <img
             alt={alt}
-            className={className}
             width={width}
             height={height}
             src={svg}
@@ -37,7 +36,8 @@ const Icon = (props: IconProps) => {
             <button
                 type="button"
                 className={cn(
-                    'bg-none hover:opacity-70 transition border-none outline-none',
+                    `bg-none h-min hover:opacity-70 transition border-none outline-none`,
+                    className
                 )}
                 onClick={props.onClick}
             >

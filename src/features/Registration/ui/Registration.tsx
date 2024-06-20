@@ -26,7 +26,7 @@ const Registration = () => {
         handleSubmit,
         watch,
         formState: { errors, isSubmitting },
-    } = methods;
+    } = methods;    
 
     const { name, email, password, confirmPassword } = watch();
     const isFormFilled = name && email && password && confirmPassword;

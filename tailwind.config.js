@@ -6,9 +6,8 @@ export default {
             colors: {
                 'green-theme': '#2DD4BF',
                 'violet-theme': '#4C1D95',
-                'blue-theme': '#1D4ED8',
+                'blue-theme': '#2986ff',
                 'red-theme': '#E12626',
-                'gray-theme': ''
             },
             fontFamily: {
                 sans: ['Montserrat'],

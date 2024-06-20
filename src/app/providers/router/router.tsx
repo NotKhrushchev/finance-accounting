@@ -6,6 +6,7 @@ import ErrorPage from '../../../pages/ErrorPage/ErrorPage';
 import Login from '../../../features/Login/ui/Login';
 import { RegistrationPage } from '../../../pages/RegistrationPage/RegistrationPage';
 import HomePage from '../../../pages/HomePage/HomePage';
+import { SettingsPage } from '../../../pages/SettingsPage/SettingsPage';
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: 'login',
                 element: <Login />,
+            },
+            {
+                path: 'settings',
+                element: <SettingsPage />,
             },
         ],
     },

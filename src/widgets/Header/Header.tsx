@@ -1,55 +1,17 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { ProfileInfo } from '../../entities/ProfileInfo/ProfileInfo';
 import Icon from '../../shared/ui/Icon/Icon';
-import BurgerMenu from '../../shared/assets/BurgerMenu-icon.svg';
-import { useState } from 'react';
-import { DrawerMenu } from '../DrawerMenu/DrawerMenu';
-
-const auth = false;
-
-const NavLinks = () => {
-    return (
-        <ul className="font-light">
-            {auth ? (
-                <li className="flex gap-[40px] items-center">
-                    <NavLink to={'/history'}>Аналитика</NavLink>
-                    <NavLink to={'/analytics'}>История</NavLink>
-                </li>
-            ) : (
-                <li className="flex gap-[40px] items-center">
-                    <NavLink
-                        to={'/login'}
-                        className={'hover:opacity-60 transition'}
-                    >
-                        sign in
-                    </NavLink>
-                    <NavLink
-                        to={'/registration'}
-                        className={
-                            'border border-teal-400 rounded p-2 hover:opacity-60 transition'
-                        }
-                    >
-                        sign up
-                    </NavLink>
-                </li>
-            )}
-        </ul>
-    );
-};
+import Gear from '../../shared/assets/Gear-icon.svg'
 
 export const Header = () => {
-    const [isDrawerOpen, setDrawerOpen] = useState(false);
+    const navigate = useNavigate();
 
-    const onOpenDrawer = () => {
-        setDrawerOpen(true);
-    };
-
-    const onCloseDrawer = () => {
-        setDrawerOpen(false);
+    const navigateToSettings = () => {
+        navigate('/settings');
     };
 
     return (
-        <header className="w-full py-4 px-6 flex items-center justify-between font-light">
+        <header className="w-full py-4 px-6 flex justify-between font-light">
             <div>
                 <ProfileInfo />
                 <NavLink to={'/'} className="font-bold text-2xl">
@@ -57,13 +19,13 @@ export const Header = () => {
                 </NavLink>
             </div>
             <Icon
-                svg={BurgerMenu}
-                alt="burger-menu"
+                svg={Gear}
+                alt="settings-bth"
                 clickable
-                onClick={onOpenDrawer}
-                width={36}
+                onClick={navigateToSettings}
+                width={22}
+                className='p-1 mb-1 self-end bg-gray-800 rounded-full'
             />
-            <DrawerMenu isOpen={isDrawerOpen} setClose={onCloseDrawer} />
         </header>
     );
 };
