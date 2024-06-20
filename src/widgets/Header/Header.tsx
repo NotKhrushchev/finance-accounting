@@ -1,4 +1,9 @@
 import { NavLink } from 'react-router-dom';
+import { ProfileInfo } from '../../entities/ProfileInfo/ProfileInfo';
+import Icon from '../../shared/ui/Icon/Icon';
+import BurgerMenu from '../../shared/assets/BurgerMenu-icon.svg';
+import { useState } from 'react';
+import { DrawerMenu } from '../DrawerMenu/DrawerMenu';
 
 const auth = false;
 
@@ -32,15 +37,33 @@ const NavLinks = () => {
     );
 };
 
-const Header = () => {
+export const Header = () => {
+    const [isDrawerOpen, setDrawerOpen] = useState(false);
+
+    const onOpenDrawer = () => {
+        setDrawerOpen(true);
+    };
+
+    const onCloseDrawer = () => {
+        setDrawerOpen(false);
+    };
+
     return (
-        <header className="w-full p-4 flex items-center justify-between font-light">
-            <NavLink to={'/'} className="font-bold text-lg text-teal-400">
-                FINANCE
-            </NavLink>
-            <NavLinks />
+        <header className="w-full py-4 px-6 flex items-center justify-between font-light">
+            <div>
+                <ProfileInfo />
+                <NavLink to={'/'} className="font-bold text-2xl">
+                    Finance
+                </NavLink>
+            </div>
+            <Icon
+                svg={BurgerMenu}
+                alt="burger-menu"
+                clickable
+                onClick={onOpenDrawer}
+                width={36}
+            />
+            <DrawerMenu isOpen={isDrawerOpen} setClose={onCloseDrawer} />
         </header>
     );
 };
-
-export default Header;

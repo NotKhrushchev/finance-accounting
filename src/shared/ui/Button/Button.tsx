@@ -13,7 +13,7 @@ const Button = (props: IButtonProps) => {
     return (
         <button
             className={cn(
-                'border border-fuchsia-500 rounded px-4 py-2 enabled:hover:border-white transition duration-200',
+                'border font-medium border-fuchsia-500 rounded px-4 py-2 enabled:hover:border-white transition duration-200',
                 { ['border-gray-theme text-gray-theme']: disabled },
                 className,
             )}

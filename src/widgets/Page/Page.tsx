@@ -9,7 +9,7 @@ interface PageProps {
 const Page = (props: PageProps) => {
     const { children, className } = props;
 
-    return <main className={cn("flex min-h-[calc(100vh-74px)] w-full flex-col", className)}>{children}</main>;
+    return <main className={cn("flex min-h-[calc(100vh-82px)] px-6 w-full flex-col", className)}>{children}</main>;
 };
 
 export default Page;

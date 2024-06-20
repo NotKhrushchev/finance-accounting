@@ -44,10 +44,12 @@ const Login = () => {
             <div className={'flex flex-col items-center mt-[-20px]'}>
                 <FormProvider {...methods}>
                     <form
-                        className={'w-[400px] flex flex-col items-center'}
+                        className={
+                            'w-full table:w-[400px] flex flex-col items-center'
+                        }
                         onSubmit={handleSubmit(onSubmit)}
                     >
-                        <h1 className={'text-2xl mb-6'}>Sign up</h1>
+                        <h1 className={'text-xl table:text-2xl mb-6'}>Sign in</h1>
                         <div className={'w-full flex flex-col gap-2'}>
                             <InputForm
                                 label={'Email'}

@@ -36,7 +36,9 @@ const Icon = (props: IconProps) => {
         return (
             <button
                 type="button"
-                className={cn('bg-none border-none outline-none')}
+                className={cn(
+                    'bg-none hover:opacity-70 transition border-none outline-none',
+                )}
                 onClick={props.onClick}
             >
                 {icon}
@@ -47,4 +49,4 @@ const Icon = (props: IconProps) => {
     return icon;
 };
 
-export default Icon
+export default Icon;
