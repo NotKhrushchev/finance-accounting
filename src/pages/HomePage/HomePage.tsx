@@ -1,11 +1,12 @@
+import { StatisticPanel } from '../../entities/StatisticPanel/StatisticPanel';
 import Page from '../../widgets/Page/Page';
 
 const HomePage = () => {
     return (
-        <Page children={undefined}>
-            
+        <Page className='pt-4'>
+            <StatisticPanel />
         </Page>
     );
 };
 
-export default HomePage
+export default HomePage;
